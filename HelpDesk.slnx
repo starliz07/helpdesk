@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="HelpDesk.Core/HelpDesk.Core.csproj" />
+  <Project Path="HelpDesk.Data/HelpDesk.Data.csproj" />
+  <Project Path="HelpDesk.Tests.Unit/HelpDesk.Tests.Unit.csproj" />
+  <Project Path="HelpDesk/HelpDesk.csproj" />
+</Solution>
