@@ -5,8 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HelpDesk"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
+        Title="Заявки" Height="500" Width="900"
+        Loaded="Window_Loaded">
+    <Grid Margin="10">
+        <DataGrid x:Name="TicketsGrid" 
+                  AutoGenerateColumns="False" 
+                  IsReadOnly="True"
+                  CanUserAddRows="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="50"/>
+                <DataGridTextColumn Header="Заголовок" Binding="{Binding Title}" Width="*"/>
+                <DataGridTextColumn Header="Приоритет" Binding="{Binding Priority}" Width="100"/>
+                <DataGridTextColumn Header="Статус" Binding="{Binding Status}" Width="100"/>
+                <DataGridTextColumn Header="Исполнитель" Binding="{Binding AssigneeId}" Width="100"/>
+                <DataGridTextColumn Header="Создана" Binding="{Binding CreatedAt}" Width="160"/>
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Window>
